@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
-//const fs = require('fs');
+const fs = require('fs');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
+const createTeam = require('./src/template')
 
 //array to store profiles
 const teamProfiles = [];
@@ -67,7 +68,7 @@ function addEmployee() {
                     internPrompt()
                     break;
                 case 'Finish building team':
-                    //finishTeamProfiles() write function to generate html
+                    completeTeam();
                     console.log(teamProfiles);
                     
         }
@@ -145,6 +146,15 @@ function internPrompt() {
         teamProfiles.push(intern);
         addEmployee();
       })
+};
+//write html file with the template's data
+function completeTeam() {
+    fs.writeFile('./dist/myTeam.html', createTeam(teamProfiles), err => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('Team generated!');
+    });
 };
         
         
