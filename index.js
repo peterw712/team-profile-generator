@@ -7,7 +7,7 @@ const createTeam = require('./src/template');
 
 //array to store profiles
 const teamProfiles = [];
-
+//prompts for each role
 function managerPrompt() {
     inquirer.prompt([
         {
