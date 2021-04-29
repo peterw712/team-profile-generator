@@ -3,7 +3,7 @@ const fs = require('fs');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
-const createTeam = require('./src/template')
+const createTeam = require('./src/template');
 
 //array to store profiles
 const teamProfiles = [];
