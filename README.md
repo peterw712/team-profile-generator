@@ -1,5 +1,5 @@
 ## Description
-Generates a roster of profiles in your workplace team, with one manager and any number of interns and engineers.
+Generates a roster of profiles for your workplace team, with one manager and any number of interns and engineers.
 ## Tests
 Includes tests for the properties and methods for each class of employee.
 ## Installation and Usage
